@@ -37,4 +37,37 @@ curl -X POST http://localhost:7777/calcs/fib -H 'Content-Type: application/json'
 
 ## Resultados
 
+Teste do CRUD:
 
+**Create**
+```bash
+curl -X POST http://localhost:7777/livro/create -H 'Content-Type: application/json' -d '{"nome": "Harry Potter", "id": "1"}'
+
+curl -X POST http://localhost:7777/livro/create -H 'Content-Type: application/json' -d '{"nome": "Senhor dos Anéis", "id": "2"}'
+
+curl -X POST http://localhost:7777/livro/create -H 'Content-Type: application/json' -d '{"nome": "Guerra dos Tronos", "id": "3"}'
+
+curl -X POST http://localhost:7777/livro/create -H 'Content-Type: application/json' -d '{"nome": "Entrada a ser Removida", "id": "4"}'
+
+curl -X POST http://localhost:7777/livro/create -H 'Content-Type: application/json' -d '{"nome": "Entrada a ser Editada", "id": "5"}'
+```
+
+*É possível listar todas os ítens com:*
+`curl -X POST http://localhost:7777/livro/listAll -H 'Content-Type: application/json'`
+
+**Recover (por nome ou por id)**
+```bash
+curl -X POST http://localhost:7777/livro/recover -H 'Content-Type: application/json' -d '{"nome": "Harry Potter"}'
+
+curl -X POST http://localhost:7777/livro/recover -H 'Content-Type: application/json' -d '{"id": "3"}'
+```
+
+**Update (através do id)**
+```bash
+curl -X POST http://localhost:7777/livro/update -H 'Content-Type: application/json' -d '{"id": "5", "nome_novo": "Bíblia"}'
+```
+
+**Destroy(através do id)**
+```bash
+curl -X POST http://localhost:7777/livro/destroy -H 'Content-Type: application/json' -d '{"id": "4"}'
+```
