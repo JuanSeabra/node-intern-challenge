@@ -39,6 +39,8 @@ curl -X POST http://localhost:7777/calcs/fib -H 'Content-Type: application/json'
 
 Teste do CRUD:
 
+Executar MongoDB com `mongod --dbpath=data`
+
 **Create**
 ```bash
 curl -X POST http://localhost:7777/livro/create -H 'Content-Type: application/json' -d '{"nome": "Harry Potter", "id": "1"}'
