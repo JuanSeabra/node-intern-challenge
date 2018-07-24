@@ -121,7 +121,6 @@ function recoverId(id) {
       })
     }
   )
-  return docs
 }
 
 function update(id, novo_nome) {
@@ -182,7 +181,6 @@ function listAll() {
         console.log("Found the following records")
         console.log(docs)
         client.close()
-        //return docs
       })
     }
   )
